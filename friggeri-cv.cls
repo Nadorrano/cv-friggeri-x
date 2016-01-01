@@ -1,10 +1,23 @@
-\ProvidesClass{friggeri-cv}[2012/04/30 CV class]
+\ProvidesClass{friggeri-cv}[2016/01/01 CV class]
 \NeedsTeXFormat{LaTeX2e}
 
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{%
   \PassOptionsToClass{\CurrentOption}{article}%
 }
+
+
+% Implement support for A4 paper
+\newif\ifafourpaper
+
+\afourpaperfalse
+
+\DeclareOption{a4paper}
+   {\setlength\paperheight {297mm}%
+    \setlength\paperwidth  {210mm}%
+    \afourpapertrue%
+   }
+
 \ProcessOptions\relax
 \LoadClass{article}
 
