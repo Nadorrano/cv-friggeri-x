@@ -6,7 +6,6 @@
   \PassOptionsToClass{\CurrentOption}{article}%
 }
 
-
 % Implement support for A4 paper
 \newif\ifafourpaper
 
@@ -157,15 +156,28 @@
 }{%
   \end{tabular*}
 }
+
+% Set a4paper and US letter size as explained here:
+% http://tex.stackexchange.com/questions/248399/trasform-friggeri-cv-to-a4
+
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
-\newcommand{\entry}[4]{%
-  #1&\parbox[t]{11.8cm}{%
+\ifafourpaper
+  \newcommand{\entry}[4]{%
+  \parbox[t]{2cm}{\hfill#1}&\parbox[t]{11.1cm}{%
+  \textbf{#2}%
+  \hfill%
+  {, \normalsize\addfontfeature{Color=gray} \textit{#3}}\\%
+  #4\vspace{\parsep}%
+  }\\}
+\else
+  \newcommand{\entry}[4]{%
+    \parbox[t]{2cm}{\hfill#1}&\parbox[t]{11.6cm}{%
     \textbf{#2}%
     \hfill%
-    {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
+    {, \normalsize\addfontfeature{Color=gray} \textit{#3}}\\%
     #4\vspace{\parsep}%
-  }\\}
-
+    }\\}
+\fi
 
 %%%%%%%%%%%%%%
 % Side block %

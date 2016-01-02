@@ -6,7 +6,13 @@ Friggeri CV is an elegant *Curriculum Vitae* template for LaTex/XeTex originally
 In this work the original template is updated/upgraded and fitted to my personal needs.
 
 ## what's new
-  - the default font (Helvetica) is replaced by the free and open source  Roboto font from Google.
+  - the default font (Helvetica) is replaced by the open source font Roboto from Google, available free of charge [here](https://www.google.com/fonts/specimen/Roboto)
+  - A4 paper size is now available for the CV class. This option can
+be set in the document class declaration as usual, e.g.:
+
+ `\documentclass[a4paper]{friggeri-cv}`
+
+# notes
 
 Uses TikZ for the header, XeTeX and fontspec to use custom fonts, biblatex to print publications and textpos for the aside.
 
