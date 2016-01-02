@@ -166,7 +166,7 @@
   \parbox[t]{2cm}{\hfill#1}&\parbox[t]{11.1cm}{%
   \textbf{#2}%
   \hfill%
-  {, \normalsize\addfontfeature{Color=gray} \textit{#3}}\\%
+  {, \normalsize\addfontfeature{Color=lightgray} \textit{#3}}\\%
   #4\vspace{\parsep}%
   }\\}
 \else
@@ -174,7 +174,7 @@
     \parbox[t]{2cm}{\hfill#1}&\parbox[t]{11.6cm}{%
     \textbf{#2}%
     \hfill%
-    {, \normalsize\addfontfeature{Color=gray} \textit{#3}}\\%
+    {, \normalsize\addfontfeature{Color=lightgray} \textit{#3}}\\%
     #4\vspace{\parsep}%
     }\\}
 \fi
