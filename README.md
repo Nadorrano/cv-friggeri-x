@@ -1,7 +1,7 @@
 # cv-friggeri-x
 
 ## about Friggeri CV
-Friggeri CV is an elegant *Curriculum Vitae* template for LaTex/XeTex originally written and released by [Adrian Friggeri](https://github.com/afriggeri).
+Friggeri CV is an elegant *Curriculum Vitae* template for LaTeX/XeTeX originally written and released by [Adrian Friggeri](https://github.com/afriggeri).
 
 In this work the original template is updated/upgraded and fitted to my personal needs.
 
@@ -10,15 +10,27 @@ In this work the original template is updated/upgraded and fitted to my personal
   - A4 paper size is now available for the CV class. This option can
 be set in the document class declaration as usual, e.g.:
 
- `\documentclass[a4paper]{friggeri-cv}`
+```tex
+\documentclass[a4paper]{friggeri-cv}
+```
 
   - two new options for the document class are available, `lightheader` and `nocolors`. The first will remove the dark background on the header, the latter will remove all colors from the document. The old `print` option is deprecated but the same effect can be obtained by turning on the former two options
 
-## notes
+## building notes
 
-Uses TikZ for the header, XeTeX and fontspec to use custom fonts, biblatex to print publications and textpos for the aside.
+This LaTeX template uses TikZ for the header, XeTeX and fontspec for custom fonts, biblatex/biber to print publications and textpos for the aside.
 
-## License
+A basic compilation workflow could be:
+
+```sh
+git clone https://github.com/Nadorrano/cv-friggeri-x
+cd cv-friggeri-x
+xelatex cv
+biber cv 
+xelatex cv
+```
+
+## license
 
 This work is released under the [CC BY-NC-SA 3.0] (http://creativecommons.org/licenses/by-nc-sa/3.0/) license.
 
