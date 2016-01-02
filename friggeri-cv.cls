@@ -1,12 +1,15 @@
 \ProvidesClass{friggeri-cv}[2016/01/01 CV class]
 \NeedsTeXFormat{LaTeX2e}
 
-\DeclareOption{print}{\def\@cv@print{}}
+\DeclareOption{lightheader}{\def\@cv@lightheader{}}
+
+\DeclareOption{nocolors}{\def\@cv@nocolors{}}
+
 \DeclareOption*{%
   \PassOptionsToClass{\CurrentOption}{article}%
 }
 
-% Implement support for A4 paper
+% Add support for A4 paper
 \newif\ifafourpaper
 
 \afourpaperfalse
@@ -39,19 +42,23 @@
 \definecolor{red}{HTML}{FB4485}
 \definecolor{blue}{HTML}{6CE0F1}
 
-\ifdefined\@cv@print
+\ifdefined\@cv@lightheader
+  \colorlet{fillheader}{white}
+  \colorlet{header}{gray}
+\else 
+  \colorlet{fillheader}{gray}
+  \colorlet{header}{white}
+\fi
+
+\ifdefined\@cv@nocolors
   \colorlet{green}{gray}
   \colorlet{orange}{gray}
   \colorlet{purple}{gray}
   \colorlet{brown}{gray}
   \colorlet{red}{gray}
   \colorlet{blue}{gray}
-  \colorlet{fillheader}{white}
-  \colorlet{header}{gray}
-\else
-  \colorlet{fillheader}{gray}
-  \colorlet{header}{white}
 \fi
+
 \colorlet{textcolor}{gray}
 \colorlet{headercolor}{gray}
 

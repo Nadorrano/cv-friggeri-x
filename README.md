@@ -12,7 +12,9 @@ be set in the document class declaration as usual, e.g.:
 
  `\documentclass[a4paper]{friggeri-cv}`
 
-# notes
+  - two new options for the document class are available, `lightheader` and `nocolors`. The first will remove the dark background on the header, the latter will remove all colors from the document. The old `print` option is deprecated but the same effect can be obtained by turning on the former two options
+
+## notes
 
 Uses TikZ for the header, XeTeX and fontspec to use custom fonts, biblatex to print publications and textpos for the aside.
 
