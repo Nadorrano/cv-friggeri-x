@@ -16,17 +16,19 @@ be set in the document class declaration as usual, e.g.:
 
   - two new options for the document class are available, `lightheader` and `nocolors`. The first will remove the dark background on the header, the latter will remove all colors from the document. The old `print` option is deprecated but the same effect can be obtained by turning on the former two options
 
+  - the "contact box" in the side section now shows informations on social networks with glyphs from the most common platforms including facebook, twitter, vk, linkedin
+
 ## building notes
 
 This LaTeX template uses TikZ for the header, XeTeX and fontspec for custom fonts, biblatex/biber to print publications and textpos for the aside.
 
-A basic compilation workflow could be:
+A basic compilation workflow would be:
 
 ```sh
 git clone https://github.com/Nadorrano/cv-friggeri-x
 cd cv-friggeri-x
 xelatex cv
-biber cv 
+biber cv
 xelatex cv
 ```
 

@@ -28,6 +28,8 @@
 % Add `nocolors` to remove colors from the document
 % Add `lightheader` to change the dark background of the header to white
 
+\usepackage{marvosym} % needed to print glyphs for email, cell phone etc.
+
 \addbibresource{bibliography.bib} % Specify the bibliography file to include publications
 
 \begin{document}
@@ -40,16 +42,20 @@
 
 \begin{aside} % In the aside, each new line forces a line break
 \section{contact}
-123 Broadway
+\pin \hfill 123 Broadway
 City, State 12345
 Country
 ~
-+0 (000) 111 1111
-+0 (000) 111 1112
+{\Large\Telefon} \hfill +0 (000) 111 1111
+{\Large\Mobilefone} \hfill +0 (000) 111 1112
+{\Large\Letter} \hfill \href{mailto:john@smith.com}{john@smith.com}
 ~
-\href{mailto:john@smith.com}{john@smith.com}
+\flogo \hfill \href{http://facebook.com/johnsmith}{fb://jsmith}
+\tlogo \hfill \href{http://twitter.com/johnsmith}{@jsmith}
+\llogo \hfill \href{http://linkedin.com/johnsmith}{in://johnsmith}
+\vklogo \hfill \href{http://vk.com/johnsmith}{vk://johnsmith}
+~
 \href{http://www.smith.com}{http://www.smith.com}
-\href{http://facebook.com/johnsmith}{fb://jsmith}
 \section{languages}
 english mother tongue
 spanish \& italian fluency

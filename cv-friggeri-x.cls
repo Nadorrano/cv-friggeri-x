@@ -41,6 +41,10 @@
 \definecolor{purple}{HTML}{D3A4F9}
 \definecolor{red}{HTML}{FB4485}
 \definecolor{blue}{HTML}{6CE0F1}
+\definecolor{fblue}{HTML}{3D539E}
+\definecolor{tblue}{HTML}{55ACEE}
+\definecolor{lblue}{HTML}{0077B5}
+\definecolor{vkblue}{HTML}{A6B8D4}
 
 \ifdefined\@cv@lightheader
   \colorlet{fillheader}{white}
@@ -57,6 +61,10 @@
   \colorlet{brown}{gray}
   \colorlet{red}{gray}
   \colorlet{blue}{gray}
+  \colorlet{fblue}{gray}
+  \colorlet{tblue}{gray}
+  \colorlet{lblue}{gray}
+  \colorlet{vkblue}{gray}
 \fi
 
 \colorlet{textcolor}{gray}
@@ -354,7 +362,35 @@
     citecolor=red,        
     filecolor=red,      
     urlcolor = red}
-    
+
+% Newcommands for glyph printing
+\RequirePackage{graphicx}
+
+% Add a Google-style pin
+\newcommand*{\pin}{%
+  \includegraphics[height=1em]{resources/pin}%
+}
+
+% Add fb logo
+\newcommand*{\flogo}{%
+  \textcolor{fblue}{\includegraphics[height=1em]{resources/f_logo}}%
+}
+
+% Add twitter logo
+\newcommand*{\tlogo}{%
+  \textcolor{tblue}{\includegraphics[height=1em]{resources/twitter_logo}}%
+}
+
+% Add linkedin logo
+\newcommand*{\llogo}{%
+  \textcolor{lblue}{\includegraphics[height=1em]{resources/linkedin_logo}}%
+}
+
+% Add vk logo
+\newcommand*{\vklogo}{%
+  \textcolor{vkblue}{\includegraphics[height=1em]{resources/vk_logo}}%
+}
+
 % A fix for \href{}{} colors not working with fontspec
 \makeatletter
 \def\HyColor@@@@UseColor#1\@nil{\addfontfeatures{Color=#1}}
