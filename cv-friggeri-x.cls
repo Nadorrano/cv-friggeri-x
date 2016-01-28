@@ -222,11 +222,11 @@
 
 \RequirePackage[backend=biber, style=verbose, maxnames=99, sorting=ydnt]{biblatex}
 
-\DeclareFieldFormat[article]{title}{#1\par}
-\DeclareFieldFormat[book]{title}{#1\par}
-\DeclareFieldFormat[inproceedings]{title}{#1\par}
-\DeclareFieldFormat[misc]{title}{#1\par}
-\DeclareFieldFormat[report]{title}{#1\par}
+\DeclareFieldFormat[article]{title}{\href{\thefield{url}}{#1}}
+\DeclareFieldFormat[inproceedings]{title}{\href{\thefield{url}}{#1}}
+\DeclareFieldFormat[book]{title}{\href{\thefield{url}}{#1}}
+\DeclareFieldFormat[misc]{title}{\href{\thefield{url}}{#1}}
+\DeclareFieldFormat[report]{title}{\href{\thefield{url}}{#1}}
 
 \DeclareBibliographyDriver{article}{%
   \printfield{title}%
@@ -333,7 +333,9 @@
     {}%
 }
 
-\defbibheading{bibheading}[\bibname]{%   \subsubsection*{#1}   \markboth{#1}{#1}
+\defbibheading{bibheading}[\bibname]{%
+   \subsubsection*{#1}
+   \markboth{#1}{#1}
 }
 
 \newcommand{\printbibsection}[2]{
