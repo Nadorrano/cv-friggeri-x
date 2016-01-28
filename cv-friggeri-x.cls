@@ -372,7 +372,7 @@
 
 % Add a Google-style pin
 \newcommand*{\pin}{%
-  \includegraphics[height=1em]{resources/pin}%
+  \textcolor{gray}{\includegraphics[height=1em]{resources/pin}}%
 }
 
 % Add fb logo
