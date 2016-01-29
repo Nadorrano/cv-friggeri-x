@@ -14,9 +14,15 @@ be set in the document class declaration as usual, e.g.:
 \documentclass[a4paper]{friggeri-cv}
 ```
 
-  - two new options for the document class are available, `lightheader` and `nocolors`. The first will remove the dark background on the header, the latter will remove all colors from the document. The old `print` option is deprecated but the same effect can be obtained by turning on the former two options
+  - two new options for the document class are available, `lightheader` and `nocolors`. The former will remove the dark background on the header, the latter will remove all colors from the document. The old `print` option is deprecated but the same effect can be obtained by turning on the previous two options
 
   - the "contact box" in the side section now shows informations on social networks with glyphs from the most common platforms including facebook, twitter, vk, linkedin
+
+- names of articles, book, publications, etc. are now active links to actual contents (web pages, files...). You have to make sure an `url` field is specified in your bibliography entries to make this work.
+
+## example
+
+![friggeri cv example](/friggeri-cv-x/wiki/images/example.png)
 
 ## building notes
 
