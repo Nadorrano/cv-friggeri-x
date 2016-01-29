@@ -22,10 +22,10 @@ be set in the document class declaration as usual, e.g.:
 
 ## examples
 
-![friggeri cv example](../../wiki/images/example.png)
-
 A part from this screenshot you can check the content of the `example`
 folder of this repo for the actual PDFs.
+
+![friggeri cv example](../../wiki/images/example.png)
 
 ## building notes
 
