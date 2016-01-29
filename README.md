@@ -20,9 +20,12 @@ be set in the document class declaration as usual, e.g.:
 
 - names of articles, book, publications, etc. are now active links to actual contents (web pages, files...). You have to make sure an `url` field is specified in your bibliography entries to make this work.
 
-## example
+## examples
 
 ![friggeri cv example](../../wiki/images/example.png)
+
+A part from this screenshot you can check the content of the `example`
+folder of this repo for the actual PDFs.
 
 ## building notes
 
