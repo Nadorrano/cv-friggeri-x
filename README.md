@@ -22,7 +22,7 @@ be set in the document class declaration as usual, e.g.:
 
 ## example
 
-![friggeri cv example](../wiki/images/example.png)
+![friggeri cv example](../../wiki/images/example.png)
 
 ## building notes
 
